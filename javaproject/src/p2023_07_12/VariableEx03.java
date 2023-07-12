@@ -12,9 +12,7 @@ public class VariableEx03 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		System.out.println("번호  \t이름  \t 직업"); // 이렇게 하면 되고
-		System.out.println("번호\t이름\t직업");//이렇게 하면 안되는 이유?
-		
+		System.out.println("번호\t이름\t직업");//탭 잘 들어간거임!
 		System.out.print("행 단위 출력\n");
 		System.out.print("행 단위 출력\n");
 		System.out.println("우리는 \"개발자\"입니다.");
