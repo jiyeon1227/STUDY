@@ -19,23 +19,24 @@ public class Report_jiyeon_01 {
 		num2 = sc.nextInt();
 		num3 = sc.nextInt();
 		
-		if((num1 > num2)&&(num1>num3)) {//num1이 가장 클때
+		//값을 비교 할 때 =를 빼면 중복된 값 입력시 잘못된 결과 출력됨
+		if((num1 >= num2)&&(num1 >= num3)) {//num1이 가장 클때
 			max = num1;
-			if(num2>num3) {
+			if(num2 >= num3) {
 				min = num3;
 			}else {
 				min = num2;
 			}
-		}else if((num2>num1) && (num2>num3)){//num2이 가장 클때
+		}else if((num2 >= num1) && (num2 >= num3)){//num2이 가장 클때
 			max = num2;
-			if(num1>num3) {
+			if(num1 >= num3) {
 				min = num3;
 			}else {
 				min = num2;
 			}
 		}else{//num3이 가장 클때
 			max = num3;
-			if(num1>num2) {
+			if(num1 >= num2) {
 				min = num2;
 			}else {
 				min = num1;

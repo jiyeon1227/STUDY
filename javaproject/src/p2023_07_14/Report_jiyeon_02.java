@@ -13,7 +13,9 @@ public class Report_jiyeon_02 {
 		System.out.print("[" + dan + "단]" + "\t");
 		}
 		
-		for(i = 0; i <10; i++) {
+		System.out.println();
+		
+		for(i = 1; i <10; i++) {
 			for(dan = 2; dan < 10; dan++) {
 				System.out.print(dan + "*" + i + "=" + dan*i + "\t" );
 			}
