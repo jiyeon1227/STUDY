@@ -10,29 +10,59 @@ public class Report_jiyeon_01 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		int arr[] = new int[5];
 		
 		System.out.println("5개의 정수를 입력하세요");
 		Scanner sc = new Scanner(System.in);
 		
-		int max, min;
 		
-		max = arr[0];
-		min = arr[0];
+		//for문 1개를 이용 -> 조건식을 사용해야함
+		int arr1[] = new int[5];
 		
-		for(int i = 0; i<arr.length; i++) {
-			arr[i] = sc.nextInt();
+		int max1, min1;
+		
+		max1 = 0;
+		min1 = 0;
+		
+		for(int i = 0; i<arr1.length; i++) {
+			arr1[i] = sc.nextInt();
 			
-			max = arr[0];
-			min = arr[0];
+			max1 = arr1[0];
+			min1 = arr1[0];
 			
-			if(arr[i] > max) max = arr[i];
-			if(arr[i] < min) min = arr[i];
+			if(arr1[i]>max1) max1 = arr1[i];
+			if(arr1[i]<min1) min1 = arr1[i];
+			
 		}
-					
-		System.out.println("max = " + max);
-		System.out.println("min = " + min);
+		System.out.println("max = " + max1);
+		System.out.println("min = " + min1);
 		
+		
+		/*
+		//for문 2개를 이용
+		int arr2[] = new int[5];
+		
+		int max2, min2;
+		
+		//키보드 입력이 완전히 끝난 다음에 초기화를 해야 오류 발생안함 -> 입력 for문 아래에서 초기화
+		//max2 = arr2[0];
+		//min2 = arr2[0];
+		
+		for(int i = 0; i<arr2.length; i++) {
+			arr2[i] = sc.nextInt();
+		}
+		
+		max2 = arr2[0];
+		min2 = arr2[0];
+		
+		for(int i = 1; i < arr2.length; i++) {
+			if(arr2[i] > max2) max2 = arr2[i];
+			if(arr2[i] < min2) min2 = arr2[i];
+		}
+		
+		
+		System.out.println("max = " + max2);
+		System.out.println("min = " + min2);
+		*/
 
 	}
 
