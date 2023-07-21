@@ -16,13 +16,18 @@ class StaticTest2 {
 public class StaticTest02 {
 	public static void main(String[] args) {
 		//System.out.println(StaticTest2.a);// a가 private으로 선언되어서 컴파일 에러 발생 -> private이기 때문
+		//System.out.println(StaticTest2.a);// 오류발생
 		System.out.println(StaticTest2.getA());
-
+		
+		//잘 사용하지 않는방법
 		StaticTest2 s1 = new StaticTest2();
 		StaticTest2 s2 = new StaticTest2();
-
-		s1.setA(10000);
-		int res1 = s1.getA();
+//		s1.setA(10000);
+		
+		StaticTest2.setA(10000);//클래스명.으로 접근하는 방식을 많이 사용
+	
+//		int res1 = s1.getA();
+		int res1 = StaticTest2.getA();
 		System.out.println(res1);
 		System.out.println(s2.getA());
 	}
