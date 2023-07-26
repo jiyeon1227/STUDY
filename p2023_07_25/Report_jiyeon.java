@@ -46,7 +46,7 @@ public class Report_jiyeon {
 		int arr[] = {2, 3, 4, 5, 6, 7, 8, 9, 2, 3, 4, 5};
 		int sum = 0;
 		
-		for(int i=0; i<13; i++) {
+		for(int i=0; i<12; i++) {
 			
 			sum += arr[i] * Integer.parseInt(jumin_num);
 		}
