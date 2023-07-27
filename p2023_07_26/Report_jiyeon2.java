@@ -4,23 +4,25 @@ package p2023_07_26;
 //(단, 중복된 숫자는 1번만 출력)
 //Math.random()을 이용해서 작성
 
-public class Report_jiyeon {
+//다른분 코드
+
+public class Report_jiyeon2 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		int arr[] = new int[6];
-				
-		for(int i=0; i<6; i++) {
-			arr[i] = (int)(Math.random()*45) + 1;
-			
-			for(int j = 1; j < i; j++) {
-				if(arr[i] == arr[j]) {
-					i--;
-				}
+		int arr[] = new int[46];
+		int cnt = 0;
+		
+		while(cnt <6) {
+			int tmp = (int)(Math.random()*45) + 1;
+
+			if(arr[tmp] == 0) {
+				System.out.print(tmp + "\t");
+				arr[tmp] = 1;
+				cnt++;
 			}
 			
-			System.out.println(arr[i]);
 		}
 		
 	}
