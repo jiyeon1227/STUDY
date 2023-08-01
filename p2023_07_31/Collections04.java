@@ -20,6 +20,7 @@ class Collections04 {
 		//리스트 출력방법 1
 		System.out.println(list);
 
+		//리스트 출력방법 2 : 인덱스 번호
 		// Object get(int index)
 		System.out.println(list.get(2));// 인덱스 2번 원소 추출: 3.42
 		System.out.println(list.get(4));// 인덱스 4번 원소 추출: five
@@ -30,7 +31,6 @@ class Collections04 {
 			Object s = list.get(i);
 //			String s =(String)(list.get(i));
 			
-			//리스트 출력방법 2
 			System.out.println(s);
 		}
 		
@@ -41,6 +41,7 @@ class Collections04 {
 		}
 		System.out.println();
 
+		//리스트 출력방법 3 : Iterator
 		// 반복자로 값들을 한꺼번에 가져와서 elements 변수에 저장하고 루프를 돌림
 		Iterator elements = list.iterator();
 		while (elements.hasNext()) {// 가져올 데이터가 있을 때만 true리턴
