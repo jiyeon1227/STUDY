@@ -1,5 +1,7 @@
 package p2023_08_03;
 
+// 스레드의 상태 제어
+// sleep(1/1000 초) : 주어진 시간동안 특정 thread를 강제로 block상태로 만들어 주는 역할
 public class ThreadSleep implements Runnable {
 
 	public void run() {
@@ -8,10 +10,10 @@ public class ThreadSleep implements Runnable {
 			System.out.println(Thread.currentThread().getName() + " : " + i);
 
 			try {
-				// sleep() 메소드를 사용해 프로그래머가 강제로
-				// block 상태로 만듦.
+				// sleep() 메소드를 사용해 프로그래머가 강제로 block 상태로 만듦.
 				// 1초 동안 thread을 block 상태에 빠트림
 				Thread.sleep(1000); // (단위: 1/1000 초)
+									// sleep메서드는 예외처리 형식을 요구함 -> 형식을 안맞추면 컴파일 자체가 안됨
 			} catch (InterruptedException ie) {
 				System.out.println(ie.toString());
 			}

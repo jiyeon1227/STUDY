@@ -1,17 +1,19 @@
 package p2023_08_03;
 
-//멀이 스레드 프로그램
+//멀티 스레드 프로그램
 
 public class ThreadLife implements Runnable {// 인터페이스를 상속받을때는 implements
 
 	public void run() {// 메서드 오버라이딩
 		for (int i = 1; i < 21; i++) {
 			// thread의 이름과 정수 출력
-			System.out.println(Thread.currentThread().getName() + " number = " + i);
+			System.out.println(Thread.currentThread().getName() + " number = " + i);//getName()은 쓰레드이름을 가져오는것
 		}
 	}
 
 	public static void main(String[] args) {
+		
+		//Runnable 클래스를 상속받은 클래스가 ThreadLife니까 ThreadLife객체를 생성
 		ThreadLife tl = new ThreadLife();
 
 		// 첫 번째 Thread 생성
