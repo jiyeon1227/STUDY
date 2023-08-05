@@ -18,7 +18,7 @@ public class ArrayEx05 {
 		}
 		System.out.println("총합: " + sum1);
 		
-		//add메서드를 호출해거 리턴된 총점을 sum2에 저장
+		//add메서드를 호출해서 리턴된 총점을 sum2에 저장
 		int sum2 = add(new int[] {83, 90, 87});//add 메서드 호출
 		System.out.println("총합: " + sum2);
 		System.out.println();
