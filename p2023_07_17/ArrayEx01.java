@@ -9,10 +9,10 @@ public class ArrayEx01 {
 		//변수를 확장한게 배열 -> 배열을 확장한게 자료구조 list
 		
 		//1차원 배열 첫번째 형식 : 배열에 저장될 값이 정해져 있지 않는 경우에 주로 사용하는 형식
-		int[] score = new int[3];
-	  //자료형[] 배열변수 = 연산자 자료형[베열의 크기]
+		int[]  score  = new   int[3];
+//	    자료형[] 배열변수  = 연산자 자료형[베열의 크기]
 		
-		//int형 배열은 자동으로 0으로 초기화되어있음
+		//int형 배열은 자동으로 0으로 초기화됨
 		System.out.println(score[0]);
 		System.out.println(score[1]);
 		System.out.println(score[2]);
@@ -24,7 +24,7 @@ public class ArrayEx01 {
 		System.out.println(score[1]);
 		System.out.println(score[2]);
 		
-		//double 배열은 자동으로 0.0으로 초기화 되었음
+		//double 배열은 자동으로 0.0으로 초기화 됨
 		double[] d = new double[3];
 		System.out.println(d[0]);
 		System.out.println(d[1]);
@@ -36,7 +36,7 @@ public class ArrayEx01 {
 		System.out.println(c[1]);
 		System.out.println(c[2]);
 		
-		//boolean 배열은 false
+		//boolean 배열은 자동으로 false로 초기화됨
 		boolean[] b = new boolean[3];
 		System.out.println(b[0]);
 		System.out.println(b[1]);
