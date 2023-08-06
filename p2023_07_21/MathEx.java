@@ -6,7 +6,7 @@ public class MathEx {
 		// TODO Auto-generated method stub
 		
 		// Math클래스
-		// Math쿨래스 = 정적필드 + 정적메서드
+		// Math클래스 = 정적필드 + 정적메서드
 		
 		//Math클래스는 생성자가 제공되지 않기 때문에, Math클래스로 직접 객체를 생성못함
 		//Math m = new Math();// 오류
