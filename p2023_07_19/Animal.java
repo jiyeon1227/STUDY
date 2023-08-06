@@ -18,7 +18,7 @@ public class Animal {
 		//메서드 안에서 정의되면 지역변수가됨
 		int a = 10;//지역변수 : stack 영역에 저장 
 		
-		String str = new String("Javs");
+		String str = new String("Java");
 		
 		Animal  a1  =    new     Animal();//heap메모리에 age가 생성됨(new연산자 쓸 때 마다 생성)
 //		 클래스  레퍼런스변수   연산자    생성자 호출

@@ -2,12 +2,12 @@ package p2023_07_19;
 
 class MyDate06 {
 
-	// field : 객체가 생성될 때 heap메모리상에서 값을 저장하는 역할
+	// field : 객체가 생성될 때 heap메모리상에 값을 저장하는 역할
 	private int year;
 	private int month;
 	private int day;
 
-	// 생성자 : 객체가 생성될 떄 호출되면서, field값을 초기화시키는 역할
+	// 생성자 : 객체가 생성될 때 호출되면서, field값을 초기화시키는 역할
 //  public MyDate06(){//default 생성자
 //  }  
 	public MyDate06(int new_year, int new_month, int new_day) {// 매개변수를 가진 생성자
