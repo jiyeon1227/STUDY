@@ -1,5 +1,7 @@
 package p2023_07_20;
 
+//2023_07_21 과제풀이
+
 import java.util.Scanner;
 
 public class Report {// MemberInput

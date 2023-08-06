@@ -12,7 +12,7 @@ class Computer{
 		return sum;
 	}
 	
-	int sum2(int ...values) {
+	int sum2(int ...values) {// 메서드의 매개변수를 ...를 사용해서 선언하게되면 메서드 호출 시 넘겨준 값의 수에 따라 자동으로 배열생성되고, 매개값으로 사용됨
 		int sum = 0;
 		for(int i=0; i<values.length; i++) {
 			sum += values[i];

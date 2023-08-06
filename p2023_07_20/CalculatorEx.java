@@ -5,7 +5,7 @@ package p2023_07_20;
 class Calculator{
 	
 	//method
-	void poerOn() {//void는 return을 생략 할 수 있음
+	void powerOn() {//void는 return을 생략 할 수 있음
 		System.out.println("전원을 켭니다.");
 		return;//생략가능
 	}
@@ -34,7 +34,7 @@ public class CalculatorEx {
 		// TODO Auto-generated method stub
 		
 		Calculator myCalc = new Calculator();
-		myCalc.poerOn();
+		myCalc.powerOn();
 		
 		int result1 = myCalc.plus(5, 6);
 		System.out.println("result1: " + result1);

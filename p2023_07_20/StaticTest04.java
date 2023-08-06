@@ -22,7 +22,7 @@ class StaticTest4 {
 public class StaticTest04 {
 	public static void main(String[] args) {
 		
-		// 정적 메서드는 정적매서드를 가진 클래명으로 dot(.)으로 접근해서 호출한다.
+		// 정적 메서드는 정적메서드를 가진 클래명으로 dot(.)으로 접근해서 호출한다.
 		StaticTest4.printA();// 정적 메서드 호출
 		
 		// 일반 메서드는 일반메서드를 가진 클래스명으로 객체를 생성해서 메서드를 호출해야함

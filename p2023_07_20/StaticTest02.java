@@ -1,7 +1,7 @@
 package p2023_07_20;
 
 class StaticTest2 {
-	private static int a = 10;//정적필드/private은 외부클래스 접근을 허용하지않음
+	private static int a = 10;//정적필드. private은 외부클래스 접근을 허용하지않음
 	private int b = 20;//인스턴스 멤버변수
 
 	public static void setA(int new_a) {//정적메서드
@@ -16,12 +16,12 @@ class StaticTest2 {
 public class StaticTest02 {
 	public static void main(String[] args) {
 		//System.out.println(StaticTest2.a);// a가 private으로 선언되어서 컴파일 에러 발생 -> private이기 때문
-		//System.out.println(StaticTest2.a);// 오류발생
 		System.out.println(StaticTest2.getA());
 		
-		//잘 사용하지 않는방법
 		StaticTest2 s1 = new StaticTest2();
 		StaticTest2 s2 = new StaticTest2();
+		
+		//잘 사용하지 않는방법
 //		s1.setA(10000);
 		
 		StaticTest2.setA(10000);//클래스명.으로 접근하는 방식을 많이 사용

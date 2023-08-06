@@ -13,12 +13,14 @@ class StaticTest01 {
 
 		System.out.println("s1.a->" + s1.a + "\t  s2.a->" + s2.a);
 		System.out.println("s1.b->" + s1.b + "\t  s2.b->" + s2.b);
+		System.out.println();
 
 		s1.a = 100;//정적필드 a값을 100 할당
 		//가장 마지막값을 공유함
 		System.out.print("s1.a->" + s1.a);
-		System.out.println("\t  s2.a->" + s2.a + "  ");
+		System.out.println("\t  s2.a->" + s2.a);
 		System.out.println(StaticTest.a);
+		System.out.println();
 
 		s1.b = 200;
 		System.out.print("s1.b->" + s1.b);
