@@ -7,7 +7,7 @@ public class StringBufferTest {
 		System.out.println("sb1.length() : " + sb1.length());
 		System.out.println("sb1.capacity() : " + sb1.capacity());// capacity는 heap메모리에 저장된 값보다 더 큰 공간을 생성함
 
-		sb1.append("A string buffer implements" + "a mutable sequence of characters");//append 는 자동으로 공간을 늘려줌
+		sb1.append("A string buffer implements" + "a mutable sequence of characters");// append 는 자동으로 공간을 늘려줌
 		System.out.println("sb1.length() : " + sb1.length());
 		System.out.println("sb1.capacity() : " + sb1.capacity());
 

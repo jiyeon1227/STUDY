@@ -18,7 +18,7 @@ public class AppendStringBuffer {
 		System.out.println("다른 주소");
 	}
 
-	// 정수형 데이타 형을 추가
+	// 정수형 데이터 형을 추가
 	System.out.println( sb1.append( 1004 ));
 	System.out.println( "sb1 = " + sb1 );
 	System.out.println( "sb2 = " + sb2 );
