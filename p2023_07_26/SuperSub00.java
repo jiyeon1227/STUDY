@@ -1,8 +1,8 @@
 package p2023_07_26;
 
 class Point2D {// 부모 클래스
-	
-	//필드
+
+	// 필드
 	private int x;
 	private int y;
 
@@ -26,6 +26,7 @@ class Point2D {// 부모 클래스
 //1. 자바에서는 클래스를 상속을 받을 때 extends로 상속을 받는다.
 //2. 자바에서는 부모 클래스를 상속받으면, 부모 클래스 안에 들어있는 필드와 메서드만 상속을 받는다.
 //3. 자바에서는 1개의 부모 클래스만 상속을 받을 수 있다. 자바에서는 클래스의 다중 상속을 허용하지 않는다.
+
 class Point3D extends Point2D {
 	private int z;
 

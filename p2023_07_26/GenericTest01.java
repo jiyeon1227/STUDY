@@ -1,6 +1,6 @@
 package p2023_07_26;
 
-//오뉴나는 곳은 GenericTest02 랑 바뀐부분 비교하면서 왜 오류나는지 알아보기
+//오류나는 곳은 GenericTest02 랑 바뀐부분 비교하면서 왜 오류나는지 알아보기
 
 class TestClass {
 	
