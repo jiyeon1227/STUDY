@@ -23,7 +23,7 @@ class Child03 extends Parent03 {
 class RefTest03 {
 	public static void main(String[] args) {
 		Parent03 p = new Child03(); // 업캐스팅(자동 형변환)
-//        부모 	   =    자식 (엥 이게 아닌가? 반대인가? ㅋ)
+//        부모 	   =    자식 
 
 		p.parentPrn();// 부모가 상속해준 메서드만 호출 가능함
 		// p.childPrn();//-> 컴파일 에러(부모가 상속해주지 않은 메서드는 접근 불가)
