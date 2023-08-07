@@ -34,7 +34,7 @@ class HashTableTest {
 		// Object get(Object key)
 		// 해쉬 테이블의 값을 키를 이용하여 얻는다.
 		// Object obj = ht.get("포도");
-		String Val = (String) ht.get("포도");// 다운캐스팅 (강제 형변환)
+		String Val = (String) ht.get("포도");// 다운캐스팅 (강제 형변환).(String)생략하면 오류 발생
 		if (Val != null) {
 			System.out.println("포도-> " + Val);
 		}
