@@ -2,7 +2,7 @@ package p2023_08_03;
 
 public class ThrowException {
 
-	// ArrayIndexOutOfBoundsException : 배여르이 범위를 벗어 났을때 발생하는 예외
+	// ArrayIndexOutOfBoundsException : 배열이 범위를 벗어 났을때 발생하는 예외
 
 	// 개발자가 강제로 예외를 발생시키는 방법
 	// throw new 예외클래스();
