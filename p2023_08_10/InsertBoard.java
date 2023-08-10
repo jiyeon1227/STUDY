@@ -11,6 +11,7 @@ public class InsertBoard {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
+		//객체가 생성되면 not null이됨 finally문에서 닫을때 조건으로 not null조건으로 닫음
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		
