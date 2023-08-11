@@ -16,7 +16,7 @@ drop sequence board_seq;
 -- 임시 테이블 삭제
 purge recyclebin;
 
--- customer 테이블
+-- customer 테이블 (회원관리)
 -- primary key(기본키) : 반드시 중복되지 않는 값을 저장 해야한다는 의미
 create table customer( no number(4) primary key, /*오라클은 숫자데이터에 no을 사용(다른 건 int사용)*/
 						name varchar2(20),/*오라클은 문자데이터에 varchar2 사용(다른 건 varchar 사용)*/
