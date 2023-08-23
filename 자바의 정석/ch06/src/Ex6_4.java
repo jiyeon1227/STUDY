@@ -1,13 +1,13 @@
 class Ex6_4 {
 	public static void main(String args[]) {
-		MyMath mm = new MyMath();// 2. My Math °´Ã¼ »ı¼º
-		// 3. My Math °´Ã¼ »ç¿ë (°´Ã¼ÀÇ ¸Ş¼­µå È£Ãâ)
+		MyMath mm = new MyMath();// 2. My Math ê°ì²´ ìƒì„±
+		// 3. My Math ê°ì²´ ì‚¬ìš© (ê°ì²´ì˜ ë©”ì„œë“œ í˜¸ì¶œ)
 		long result = mm.max(5, 3);
-		long result1 = mm.add(5L, 3L);// add¸Ş¼­µå È£Ãâ
+		long result1 = mm.add(5L, 3L);// addë©”ì„œë“œ í˜¸ì¶œ
 		long result2 = mm.subtract(5L, 3L);
 		long result3 = mm.multiply(5L, 3L);
 		double result4 = mm.divide(5L, 3L);
-		mm.printGugudan(12);// 12¸é Á¶°Ç½ÄÀÌ ÂüÀÌµÇ¾î ÇÔ¼ö°¡ Á¾·áµÊ
+		mm.printGugudan(12);// 12ë©´ ì¡°ê±´ì‹ì´ ì°¸ì´ë˜ì–´ í•¨ìˆ˜ê°€ ì¢…ë£Œë¨
 
 		System.out.println("add(5L, 3L) = " + result1);
 		System.out.println("subtract(5L, 3L) = " + result2);
@@ -16,14 +16,14 @@ class Ex6_4 {
 	}
 }
 
-class MyMath {// 1. My Math Å¬·¡½º ÀÛ¼º (¸Ş¼­µå ÀÛ¼º)
+class MyMath {// 1. My Math í´ë˜ìŠ¤ ì‘ì„± (ë©”ì„œë“œ ì‘ì„±)
 	long add(long a, long b) {
 		long result = a + b;
-		return result; // ÀÛ¾÷À» ¸¶Ä¡¸é È£ÃâÇÑ °÷À¸·Î µ¹¾Æ°¨
-		// return a + b; // À§ÀÇ µÎ ÁÙÀ» ÀÌ¿Í °°ÀÌ ÇÑ ÁÙ·Î °£´ÜÈ÷ ÇÒ ¼ö ÀÖ´Ù.
+		return result; // ì‘ì—…ì„ ë§ˆì¹˜ë©´ í˜¸ì¶œí•œ ê³³ìœ¼ë¡œ ëŒì•„ê°
+		// return a + b; // ìœ„ì˜ ë‘ ì¤„ì„ ì´ì™€ ê°™ì´ í•œ ì¤„ë¡œ ê°„ë‹¨íˆ í•  ìˆ˜ ìˆë‹¤.
 	}
 
-	// µÎ °ªÀ» ¹Ş¾Æ¼­ µÑÁß¿¡ Å« °ªÀ» ¹İÈ¯ÇÏ´Â ¸Ş¼­µå¸¦ ÀÛ¼ºÇÏ½Ã¿À
+	// ë‘ ê°’ì„ ë°›ì•„ì„œ ë‘˜ì¤‘ì— í° ê°’ì„ ë°˜í™˜í•˜ëŠ” ë©”ì„œë“œë¥¼ ì‘ì„±í•˜ì‹œì˜¤
 	long max(long a, long b){
 		long result = 0;
 		result = a > b ? a: b;
@@ -44,20 +44,20 @@ class MyMath {// 1. My Math Å¬·¡½º ÀÛ¼º (¸Ş¼­µå ÀÛ¼º)
 	}
 	
 	void printGugudan(int dan) {
-		if(!(2<=dan  && dan <=99)) return; // ÀÔ·Â¹ŞÀº ´ÜÀÌ 2~9°¡ ¾Æ´Ï¸é, ¸Ş¼­µå Á¾·áÇÏ°í µ¹¾Æ°¡±â
+		if(!(2<=dan  && dan <=9)) return; // ì…ë ¥ë°›ì€ ë‹¨ì´ 2~9ê°€ ì•„ë‹ˆë©´, ë©”ì„œë“œ ì¢…ë£Œí•˜ê³  ëŒì•„ê°€ê¸°
 		for(int i=1; i<=9; i++) {
 			System.out.printf("%d *%d =%d%n", dan, i, dan * i);
 		}
 	}
 	
-	long max2(long a, long b){// Âü, °ÅÁşÀÏ¶§ µÑ´Ù return¹® ½áÁà¾ßµÊ
+	long max2(long a, long b){// ì°¸, ê±°ì§“ì¼ë•Œ ë‘˜ë‹¤ returnë¬¸ ì¨ì¤˜ì•¼ë¨
 		if(a>b)
-			return a; // Á¶°Ç½ÄÀÌ ÂüÀÏ¶§¸¸ ½ÇÇà
+			return a; // ì¡°ê±´ì‹ì´ ì°¸ì¼ë•Œë§Œ ì‹¤í–‰
 		else
-			return b;// Á¶°Ç½ÄÀÌ °ÅÁşÀÏ‹š ½ÇÇà
+			return b;// ì¡°ê±´ì‹ì´ ê±°ì§“ì¼Â‹Âš ì‹¤í–‰
 	}
 }
 
-// 1. My Math Å¬·¡½º ÀÛ¼º (¸Ş¼­µå ÀÛ¼º)
-// 2. My Math °´Ã¼ »ı¼º
-// 3. My Math °´Ã¼ »ç¿ë (°´Ã¼ÀÇ ¸Ş¼­µå È£Ãâ)
+// 1. My Math í´ë˜ìŠ¤ ì‘ì„± (ë©”ì„œë“œ ì‘ì„±)
+// 2. My Math ê°ì²´ ìƒì„±
+// 3. My Math ê°ì²´ ì‚¬ìš© (ê°ì²´ì˜ ë©”ì„œë“œ í˜¸ì¶œ)
