@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>table</title>
+</head>
+<body>
+<table border = "1"  width="200" heigth = "200" align="center" bgcolor = "skyblue">
+	<tr>
+		<td>1</td>
+	</tr>
+</table>
+
+<br>
+
+<!-- 3행 1열 테이블-->
+<table border="1" width ="200" heigth="300" align="center">
+	<tr><td align="center">호랭랭</td></tr>
+	<tr><td align="center">사자</td></tr>
+	<tr><td align="center">원숭숭</td></tr>
+</table>
+<br>
+
+<!-- colspan : 열 합치기
+1. colspan 속성은 td, th 태그 안에서만 사용할 수 있다.
+2. colspan 속성값은 몇개의 열을 합치는가에 따라서 숫자를 지정한다.
+	<td colspan =3>
+-->
+
+<table border="1" width="300" heigh="200" align="center">
+	<tr align="center">
+		<td colspan="3">동물</td>
+	</tr>
+	<tr align="center">
+		<td>호랭랭</td>
+		<td>사자</td>
+		<td>원숭숭</td>
+	</tr>
+</table>
+
+<br>
+
+<table border="1" width="300" height="300" align="center">
+	<tr align="center">
+		<td colspan="3">동물</td>
+		<td colspan="3">꽃</td>
+	</tr>
+	
+</table>
+
+<br>
+
+<table border="1" width="400" heigth="600" align="center">
+	<tr align="center">
+		<td rowspan="3"> 동물 </td>
+		<td>호랭쓰</td>
+	</tr>
+	<tr align="center">
+		<td>사자</td>
+	</tr>
+	<tr align="center">
+		<td>원숭숭</td>
+	</tr>
+	
+	<tr align="center">
+		<td rowspan="3"> 꽃 </td>
+		<td>장미</td>
+	</tr>
+	<tr align="center">
+		<td>튤립</td>
+	</tr>
+	<tr align="center">
+		<td>코스모스</td>
+	</tr>
+</table>
+	
+
+
+
+
+</body>
+</html>
