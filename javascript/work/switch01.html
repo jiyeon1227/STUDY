@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>switch ~ case문</title>
+</head>
+<body>
+	
+	<script>
+		// switch ~ case문
+		
+		// 0~100점 사이의 점수를 입력받아서 해당 학점을 출력하는 프로그램을 switch ~ case 문으로 작성하세요
+		
+		var s = Number(prompt("0~100점 사이의 점수를 입력 하세요",""));
+		
+		// parseInt : 문자형 데이터를 정수형 데이터로 변환
+		// pasrseInt("9.5") -> 9 출력
+		switch(parseInt(s/10)){
+			case 10:
+			case 9 : alert("A");
+					break;
+			case 8 : alert("B");
+					break;
+			case 7 : alert("C");
+					break;
+			case 6 : alert("D");
+					break;
+			default :alert("F");
+		}
+	</script>
+
+</body>
+</html>

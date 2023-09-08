@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>prompt 함수</title>
+</head>
+<body>
+<!-- 
+	prompt() 함수
+	: 사용자로부터 입력을 받을때 사용하는 함수
+	형식 : prompt('메세지','초기값')
+-->
+	<script>
+		var name = promt("이름을 입력하세요?","");
+		document.write("당신의 이름은 " + name + "<br>");
+		document.write(typeof(name)+ "<br>");
+	</script>
+	
+	<script>
+		var age = prompt("나이를 입력하세요" , "");
+		alert(typeof(age)); // string으로 값을 받음
+		
+		// js 특성상 string도 비교 할 수 있음
+		if(age >= 20){
+			alert("성인 귀요미");
+		}else{
+			alert("미성년자 귀요미");
+		}
+	</script>
+
+</body>
+</html>
