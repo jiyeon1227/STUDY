@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>사용자 정의 함수</title>
+<script>
+// 같은 script 안에 있는 함수는 위치에 상관없이 호출 할 수 있다.
+//(다른 script에서는 정의가 위에오고, 호출을 아래쪽에 사용해야함)
+check(); // 호출 가능함
+
+		function check(){// 사용자 정의 함수
+			alert("함수 호출 성공 !");
+		}
+	</script>
+</head>
+<body>
+
+<!--방법1. 함수호출-->
+<script>
+	check();// 함수 호출
+</script>
+
+<!--방법2. 이벤트를 이용해서 함수 호출-->
+<input type="button" value="함수호출" onClick="check()"> <!-- onClick, onclick, ONCLICK 이렇게 써도 호출됨 (대소문자 구분 안함)-->
+
+</body>
+</html>

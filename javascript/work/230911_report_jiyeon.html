@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2023_09_11 과제</title>
+</head>
+
+<body>
+
+<script>
+	// 과제. 구구단(2~9)을 열방향으로 출력하는 프로그램(테이블 태그를 사용해서 처리)
+	
+	document.write("<table border='1' align='center'>");
+	document.write("<caption>구구단</caption>");
+	
+	// 단 출력
+	document.write("<tr>");
+	for(var dan=2; dan<=9; dan++){
+		document.write("<th>" + dan + "</th>");
+	}
+	document.write("</tr>");
+		
+		
+	// 계산식 출력
+	document.write("<tr>");
+	for(var dan =2; dan<=9; dan++){
+		document.write("<td>");
+		for(var i=2; i<=9; i++){
+		document.write(dan + "*" + i+"="+dan*i+ "<br>");
+		}
+		document.write("</td>");
+	}
+	document.write("</tr>");
+	document.write("</table>");
+	
+</script>
+	
+	
+</body>
+</html>
