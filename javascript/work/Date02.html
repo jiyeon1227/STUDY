@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Date 객체</title>
+
+<style>
+	#mytime{
+		border: skyblue; /* 테두리제거(색깔은 뭔지 모르겠음)*/
+	}
+</style>
+
+<script>
+	function show(){
+		var t = new Date();
+		var y = t.getFullYear();
+		var m = t.getMonth()+1;
+		var d = t.getDate();
+		var h = t.getHours();
+		var mi = t.getMinutes();
+		var s = t.getSeconds();
+		
+		var time = y+"-"+m+"-"+d+" "+h+":"+m+":"+s;
+		
+		document.getElementById('mytime').value = time;
+		
+		// w 변수는 앞에 선언자(let, var, const)가 없으므로 전역변수 => stop함수에서도 사용가능
+		// setTimeout():주어진 시간마다 명령을 실행하는 함수
+		w = setTimeout("show()",1000); // 1초에 한 번 씩 show함수를 호출
+	}
+	
+	function stop(){
+		// setTimeout으로 실행된 명령을 취소해줌
+		clearTimeout(w);// w가 전역변수이므로 사용가능
+		
+	}
+</script>
+</head>
+
+<body onLoad="show()"> <!--웹페이지 로드하자마자 show함수 출력-->
+현재시간 : <input type="text" id="mytime"><br><br>
+
+<input type="button" value="start" onclick="show()">
+<input type="button" value="stop" onclick="stop()">
+
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Date 객체</title>
+</head>
+<body>
+	<script>
+		// 현재 연, 월, 일, 시, 붙 초, 요일을 구하는 프로그램
+		var t = new Date();// 날짜를 구해주는 함수
+		
+		var y = t.getFullYear();// 연도
+		var m = t.getMonth() + 1; // 월을 0부터 구해오기 때문에 +1을 해줘야함
+		var d = t.getDate();// 일
+		var h = t.getHours();// 시간
+		var mm = t.getMinutes();// 분
+		var s = t.getSeconds();// 초
+		var w = t.getDay();// 요일(0~6)
+		
+		// 숫자로 나오는 요일을 문자로 출력하기 (베열사용)
+		var week = ['일','월','화','수','목','금','토'];
+		document.write(week[2]);
+		
+
+		
+		document.write(t);
+		document.write(w); // 화요일: w가 2 출력됨
+		document.write(y+"-"+m+"-"+d+"-"+h+":"+mm+":"+s);
+		document.write(week[2]+"요일");
+	</script>
+</body>
+</html>

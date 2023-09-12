@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Date 객체</title>
+<script>
+	var c = ['blue','pink','green','gray','skyblue','yellow'];
+	
+	function change(){
+		var t = new Date();
+		var s = t.getSeconds();
+		var na = s % 6;// 나머지 : 0~5
+		
+		document.bgColor = c[na]; // 배경색 설정
+		
+		w = setTimeout("change()",1000); // 1초에 한번씩 change함수 호출	
+	}
+	
+	function stop(){
+		clearTimeout(w);
+		
+	}
+</script>
+</head>
+<body>
+	<h1>화면색이 뾰로롱 ~</h1>
+	<input type="button" value="배경색 변경" onclick="change()">
+	<input type="button" value="중지" onclick="stop()">
+</body>
+</html>
