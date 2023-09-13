@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>2023_09_12 과제</title>
+<script>
+// 과제. Math.random()을 이용해서 1~45 사이의 난수를 6개 추출하는 프로그램
+// 조건1. 중복되지 않는 값을 구해야함
+// 조건2. 구해진 값을 오름차순으로 정렬해서 출력
+
+function find(){
+	var lotto = new Array();
+
+	for(var i=0; i<6; i++){
+		// 1~45 난수 발생 부분 
+//		lotto[0]=10; lotto[1]=10; 
+		lotto[i] = Math.floor(Math.random()*45)+1;
+
+		//중복 검사 부분
+		for(var j=0; j<i; j++){
+			if(lotto[i] == lotto[j]){
+				i--;
+				break;
+			}
+		}
+	}
+//	lotto.sort();
+
+// 정렬방식 : 오름차순 (1,2,3....)
+  lotto.sort(function(a,b){
+   return a-b;
+  });
+
+// 정렬방식 : 내림차순 (10,9,8...)
+//  lotto.sort(function(a,b){
+//   return b-a;
+//  });
+
+    document.write(lotto);
+
+//	for(var k=0; k<6; k++){
+//		document.write(lotto[k]+"  ");
+//	}
+
+}
+</script>
+</head>
+<body>
+<form>
+	<input type=button value="추첨하기" onClick="find()">
+ </form> 
+</body>
+</html>
