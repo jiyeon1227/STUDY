@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Login Form</title>
+<!-- 외부 자바스크립트 파일 불러오기-->
+<script src="login.js"></script>
+</head>
+<body>
+
+<form method = "post" action ="login.jsp" onsubmit="return check()">
+	<table border="1" width="350" align="center">
+		<caption>로그인</caption>
+		<tr>
+			<td>id</td>
+			<td>
+				<input type = "text" 
+					   size = "20"
+					   maxlength="10"
+					   autofocus
+					   name = "id"
+					   id = "id"
+					   placeholder="아이디를 입력하세요">
+			</td>
+		</tr>
+		<tr>
+			<td>비밀번호</td>
+			<td><input type= "password" 
+					   size ="20"
+					   name = "pass"
+					   id = "pass"
+					   placeholder="비밀번호를 입력하세요"></td>
+		</tr>
+		<tr>
+			<td colspan="2" align="center">
+				<input type ="submit" value="로그인"> <!-- 전송기능이 있는 버튼 --> 
+				<input type ="reset" value="취소"> <!-- 초기화 버튼 -->
+			</td>
+		</tr>
+	</table>
+</form>
+
+</body>
+</html>
