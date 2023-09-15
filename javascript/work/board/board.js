@@ -1,6 +1,6 @@
 function check(){
 		var writer = document.getElementById("writer");
-		var pass = document.getElementById("pass");
+		var pass = document.getElementById("passwd");
 		var subject = document.getElementById("subject");
 		var content = document.getElementById("content");
 		
@@ -35,4 +35,17 @@ function check(){
 			subject.focus();
 			return false;
 		}
+		
+		if(content.value == ""){
+			alert("내용을 입력 하세요.");
+			content.focus();
+			return false;			
+		}
+		
+		if(content.value.length > 200){
+			alert("내용을 200자 이내로 입력 하세요.");
+			content.focus();
+			return false;
+		}
+		
 	}
