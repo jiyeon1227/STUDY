@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src = "http://code.jquery.com/jquery-latest.js"></script>
+<script>
+	$(document).ready(function(){
+		$("p").click(function(){// p태그를 클릭했을때
+			$("p").hide();// 사라짐
+		});
+		
+		$("button").click(function(){// button을 클릭했을때
+			$("p").show();// 나타남
+		})
+	});
+</script>
+</head>
+<body>
+	<p>안녕하세용가뤼</p>
+	<button type="button"> 출력 </button>
+</body>
+</html>

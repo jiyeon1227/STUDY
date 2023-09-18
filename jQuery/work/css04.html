@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+	$(document).ready(function(){
+		// class 값이 first 이고 후손태그가 strong인 태그를 불러와서 css를 적용한다.
+		$(".first strong").css("color","green");// 띄어쓰기로 구분함
+	});
+</script>
+</head>
+<body>
+	<ul>
+		<li class="first"><strong>test </strong>test test</li>
+		<li class="second"><strong>test </strong>test test</li>
+		<li class="third"><strong>test </strong>test test</li>
+		<li class="fourth"><strong>test </strong>test test</li>
+	</ul>
+</body>
+</html>

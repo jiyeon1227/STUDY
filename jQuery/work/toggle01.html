@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>toggle 함수</title>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+	// div 태그에 toggle()힘수를 적용하면, div 내용이 보였다 사라진다.
+	$(function(){
+		$("button").click(function(){
+			$("div").toggle();// toggle은 나탔다 사라졌다를 반복
+		});
+	})
+</script>
+</head>
+<body>
+	<button>start</button>
+	<div>출력1</div>
+	<div>출력2</div>
+	<div>출력3</div>
+</body>
+</html>

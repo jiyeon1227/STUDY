@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+	$(document).ready(function(){
+		// li태그의 모든 후손태그를 불러와서 css를 적용한다.
+		$("li *").css("color","green");// li태그 띄어쓰기 * -> li태그의 모든 후손태그
+	});
+</script>
+</head>
+<body>
+	<ul>
+		<li><strong>test</strong> test test test</li>
+		<li><em>test</em> test test test</li>
+		<li><span>test</strong> test test test</li>
+		<li>test test test test</li>
+	</ul>
+</body>
+</html>

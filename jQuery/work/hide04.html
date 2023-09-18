@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+	$(function(){// 간단한 표기법 사용.$(document).ready(function()이렇게도 사용 많이함
+		$("select").change(function(){
+			var c = $("select").val();
+			
+			if(c == 1){// 1번을 선택한 경우
+				$("#sel01").show();
+				$("#sel02").hide();
+			}else{// 2번을 선택한 경우
+				$("#sel01").hide();
+				$("#sel02").show();
+			}
+		});
+	});
+</script>
+</head>
+<body>
+	<select>
+		<option value="1">1번</option>
+		<option value="2">2번</option>
+	</select>
+	<div id="sel01">
+		<input type="text">
+	</div>
+	<div id="sel02">
+		<textarea rows="10" cols="10"></textarea>
+	</div>
+</body>
+</html>
