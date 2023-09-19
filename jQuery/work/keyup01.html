@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>keyup 이벤트</title>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+	$(document).ready(function(){
+		// 주민번호 뒷자리로 포커스 이동
+		// 이벤트는 주민번호 앞자리에서 손을 뗼때 발생함
+		$("#jumin1").keyup(function(){// keyup 이벤트
+			if($("#jumin1").val().length == 6){// 입력양식, 선택양식의 값을 구해올 떄는 val을 사용
+			$("#jumin2").focus(); // 앞자리가 6자리일 경우에만 포커스 이동
+			}
+		});
+	});
+</script>
+</head>
+<body>
+	주민번호 : <input type="text" size="6" maxlength="6" id="jumin1">
+			-
+			<input type="text" size="7" maxlength="7" id="jumin2">
+
+</body>
+</html>

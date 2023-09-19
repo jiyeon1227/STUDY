@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>submit 이벤트</title>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+	$(function(){
+		$('#myform').submit(function(){ // form태그가 여러개 있을떄는 id값을 부여하면 된다.
+			if($('#name').val() == ""){
+				alert('아이디를 입력하세요.')
+				$('#name').focus();
+				return false;
+			}
+		})
+	})
+</script>
+</head>
+<body>
+<form id="myform" method="post" action="send.jsp">
+	이름 : 
+	<input type="text" size="20" name="name" id="name">
+	<input type="submit" value="전송">
+</form>
+</body>
+</html>
