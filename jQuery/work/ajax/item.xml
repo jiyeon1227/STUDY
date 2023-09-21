@@ -1,0 +1,10 @@
+<items>
+	<item id ="1" name="청포도">
+	<price>5억원</price>
+	<description>지여니가 젤 조아하는 과일</description>
+	</item>
+	<item id ="2" name="레몬">
+	<price>3000</price>
+	<description>레몬에 포함되어 있는 쿠앤산은 피로회복에 좋다. 비타민C도 풍부하다.</description>
+	</item>
+</items>

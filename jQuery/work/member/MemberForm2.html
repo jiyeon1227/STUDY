@@ -1,0 +1,254 @@
+
+<!-- 건T 코드-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="UTF-8">
+   <title>회원가입</title>
+   <script src="http://code.jquery.com/jquery-latest.js"></script>
+   <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+   <script>
+      function openDaumPostcode() {
+         new daum.Postcode({
+            oncomplete: function (data) {
+               document.getElementById('addressNum').value = data.zonecode;
+               document.getElementById('address').value = data.address;
+            }
+         }).open();
+      }
+   </script>
+   <script>
+      var idPattern = /^[a-z0-9]+$/;
+      $(function () {
+         $('form').submit(function () {
+            // 아이디
+            if ($('#id').val() == '') {
+               alert('ID를 입력해주세요.')
+               $('#id').focus();
+               return false;
+            }
+            
+            if (!idPattern.test($.trim($('#id').val()))) {
+               alert('ID는 영소문자,숫자만 사용 가능합니다.')
+               $('#id').focus();
+               return false;
+            }
+            // 비번
+            if ($('#passwd').val() == '') {
+               alert('비밀번호를 입력하세요.')
+               $('#passwd').focus();
+               return false;
+            }
+            // 이름
+            if ($('#name').val() == '') {
+               alert('성명을 입력하세요.')
+               $('#name').focus();
+               return false;
+            }
+            // 주민
+            if ($('#jumin1').val().length != 6 || $('#jumin2').val().length != 7) {
+               alert('주민번호를 다시 입력하세요.')
+               $('#jumin2').val('');
+               $('#jumin1').val('').focus();
+               return false;
+            }
+            
+            // 이메일
+            if ($('#emailid').val() == '') {
+               alert('이메일 아이디를 입력하세요.')
+               $('#emailid').focus();
+               return false;
+            }
+
+            if ($('#domain').val() == '') {
+               alert('도메인을 입력하세요.')
+               $('#domain').focus();
+               return false;
+            }
+            
+            // 전화번호
+            if ($('#number1').val() == '' || $('#number1').val().length != 3) {
+               alert('전화번호를 다시 입력하세요')
+               $('#number1').focus();
+               return false;
+            }
+            if ($('#number2').val() == '' || $('#number2').val().length != 4) {
+               alert('전화번호를 다시 입력하세요')
+               $('#number2').focus();
+               return false;
+            }
+            if ($('#number3').val() == '' || $('#number3').val().length != 4){
+               alert('전화번호를 다시 입력하세요')
+               $('#number3').focus();
+               return false;
+            }
+            
+            // 성별
+            if (!$('input[name="gender"]').is(':checked')) {
+               alert('성별을 선택하세요.');
+               return false;
+            }
+            /*
+            if ($(':radio').is('checked') == false) { 이 코드는 안되는 코드!
+               alert('성별을 선택하세요.');
+               return false;
+            }
+            */
+            // 취미
+            if(!$('input[name=hobby]').is(':checked')){
+               alert('취미를 선택하세요.')
+               return false;
+            }
+            /*
+            if($(':checkbox').is('checked') == false){
+               alert('취미를 선택하세요.')
+               return false;
+            }
+            */
+            
+            // 자기소개
+            if($('#introduceText').val().length > 100){
+               alert('100자 이내로 입력하세요');
+               return false;
+            }
+         })
+         // ID중복 검사
+         $('#idcheck').click(function(){
+            if ($('#id').val() == '') {
+               alert('ID를 입력해주세요.')
+               $('#id').focus();
+               return false;
+            } else {
+               // open('팝업차에 실행될 문서명','윈도우 이름','옵션')
+               
+               var ref = "idcheck.jsp?id="+$('#id').val();
+               window.open(ref,"mywin","width=250, height=150")
+            }
+         })
+         
+         // 주민 keyup
+         $('#jumin1').keyup(function(){
+            if($('#jumin1').val().length == 6){
+               $('#jumin2').focus();
+               return false;
+            }
+         })
+         
+         // 이메일
+         $('#domainSelect').change(function(){
+            if($(this).val() == ''){
+               $('#domain').val('');
+               $('#domain').removeAttr('readonly')
+            }else{
+               $('#domain').val($(this).val());
+               $('#domain').attr('readonly',true);
+            }
+         })
+         
+         // checkbox 전체선택
+         $('#selectAll').click(function(){
+            $(':checkbox').prop('checked',true);
+         })
+         
+         
+      })
+   </script>
+</head>
+
+<body>
+   <form method="post" action="send.jsp">
+      <table border="1" align="center">
+         <caption>회원가입 폼</caption>
+         <tr>
+            <td>ID</td>
+            <td><input type="text" size="15" id="id"> <input type="button" value="ID중복검사" id="idcheck"></td>
+         </tr>
+         <tr>
+            <td>비밀번호</td>
+            <td><input type="text" size="15" id="passwd"></td>
+         </tr>
+         <tr>
+            <td>성명</td>
+            <td><input type="text" size=15 maxlength="4" id="name"></td>
+         </tr>
+         <tr>
+            <td>주민번호</td>
+            <td>
+               <input type="text" size="6" maxlength="6" id="jumin1">-
+               <input type="text" size="7" maxlength="7" id="jumin2">
+            </td>
+         </tr>
+         <tr>
+            <td>E-Mail</td>
+            <td>
+               <input type="text" size="10" id="mailid">@
+               <input type="text" size="15" id="domain">
+               <select id="domainSelect">
+                  <option value="">직접입력</option>
+                  <option value="naver.com">네이버</option>
+                  <option value="kakao.com">카카오</option>
+                  <option value="google.com">구글</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>전화번호</td>
+            <td>
+               <input type="text" size="6" id="number1">-
+               <input type="text" size="6" id="number2">-
+               <input type="text" size="6" id="number3">
+            </td>
+         </tr>
+         <tr>
+            <td>핸드폰</td>
+            <td>
+               <select id="phone1">
+                  <option selected>010</option>
+                  <option>011</option>
+                  <option>016</option>
+               </select>-
+               <input type="text" size="4" id="phone2">-
+               <input type="text" size="4" id="phone3">
+            </td>
+         </tr>
+         <tr>
+            <td>우편번호</td>
+            <td><input type="text" size="6" id="addressNum"> <input type="button" value="우편검색" onclick="openDaumPostcode()"></td>
+         </tr>
+         <tr>
+            <td>주소</td>
+            <td><input type="text" size="25" id="address"></td>
+         </tr>
+
+         <tr>
+            <td>성별</td>
+            <td>
+               <input type="radio" name="gender" value="남자" id="male">남자
+               <input type="radio" name="gender" value="여자" id="female">여자
+            </td>
+         </tr>
+         <tr>
+            <td>취미</td>
+            <td>
+               <input type="checkbox" name="hobby" value="공부">공부
+               <input type="checkbox" name="hobby" value="등산">등산
+               <input type="checkbox" name="hobby" value="게임">게임
+               <input type="checkbox" name="hobby" value="낚시">낚시
+               <input type="checkbox" name="hobby" value="쇼핑">쇼핑
+               <input type="checkbox" name="hobby" value="전체선택" id="selectAll">전체선택
+            </td>
+         </tr>
+         <tr>
+            <td>자기소개</td>
+            <td><textarea rows="10" cols="50" placeholder="자기소개를 100자 이내로 입력하세요." id="introduceText"></textarea></td>
+         </tr>
+         <tr align="center">
+            <td colspan="2"><input type="submit" value="제출"> <input type="reset" value="취소"></td>
+         </tr>
+      </table>
+   </form>
+</body>
+
+</html>

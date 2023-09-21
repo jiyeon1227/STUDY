@@ -5,6 +5,7 @@
 <title>정규 표현식</title>
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 <script>
+	// 정규 표현식은 야잉 많기 때문에 따로 공부를 해야함
 $(document).ready(function(){
 	$('form').submit(function(){
 		// 정규 표현식   //영문소문자,숫자,언드바(_)만 사용가능
@@ -16,7 +17,7 @@ $(document).ready(function(){
 			alert('ID를 입력 하세요.');
 			$('#id').focus();
 			return false;
-		}else if(!pattern.test(id)){    // 정규 표현식 검사
+		}else if(!pattern.test(id)){    // 정규 표현식 검사 (조건식을 true로 만들기 위해 ! 붙임)
 			alert('ID는 영문소문자로 시작하고\r\n'+
 				  '영문소문자, 숫자, 언더바(_)만 사용할 수 있습니다.');
 			$('#id').val('').focus();

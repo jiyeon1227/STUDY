@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>get 함수</title>
+<style>
+	td{ border: 1px solid gray;}
+</style>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+	$(document).ready(function(){
+		$.get("item.xml", function(data){// "item.xml을 요청하겠다", "콜백함수" -> 콜백함수의 매개변수흘 통해서 데이터를 받음
+			$("#treeData").append(// append함수는 새로운 내용을 추가 할 때 사용하는 함수
+				"<tr><td>id</td>" + "<td>name</td>" + 
+				"	<td>price</td>" + "<td>description</td></tr>");
+			
+			$(data).find("item").each(function(){// 콜백함수의 매개변수 data를 통해 값을 가져옴
+				var item = $(this);
+				$("#treeData").append(// append함수로 첫번째 데이터 추가
+					"<tr><td>"
+					+ item.attr("id") + "</td><td>"// attribute을 구해올 때 쓰는 함수가 attr
+					+ item.attr("name") + "</td><td align='right'>"
+					+ item.find("price").text() + "</td><td>"// price는 element이기 때문에 find함수 사용
+					+ item.find("description").text() + "</td></tr>");
+			});
+		});
+	});
+</script>
+</head>
+<body>
+	<table id="treeData"></table>
+</body>
+</html>
