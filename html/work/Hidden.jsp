@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Hidden</title>
+<title>Hidden.html에서 값 받아오기</title>
 </head>
 <body>
 

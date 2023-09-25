@@ -4,12 +4,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>loginform.html 에서 값 받기</title>
 </head>
 <body>
 
-ID :<%=request.getParameter("id") %>
-<br>
+ID :<%=request.getParameter("id") %><br>
 pass :<%=request.getParameter("pass") %>
  
 </body>
