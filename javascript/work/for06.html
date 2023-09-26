@@ -9,13 +9,13 @@
 <script>
 	// 구구단 2~9단을 출력하는 프로그램을 작성하요
 	
-	for(var dan =2; dan<=9; dan++){
-		document.write("["+ dan + "단]<br>");
+	for(var dan =2; dan<=9; dan++){ // 단
+		document.write("["+ dan + "단]<br>"); //  단 타이틀
 		
 		for(var i=1; i<=9; i++){
 			document.write(dan+"*"+i+"="+dan*i+"<br>");
 		}
-		document.write("<br>");
+		document.write("<br>"); // 각 단 줄간격 벌리기
 	
 	}
 </script>

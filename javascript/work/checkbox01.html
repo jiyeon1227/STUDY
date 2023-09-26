@@ -23,7 +23,6 @@
 		alert(s+"\n을 좋아하는군용");
 	}
 </script>
-
 </head>
 <body>
 	
@@ -34,7 +33,12 @@
 		<input type="checkbox" name="fruit" id="f3"> 복숭아
 		<input type="checkbox" name="fruit" id="f4"> 수박
 		<input type="checkbox" name="fruit" id="f5"> 키위
-		<input type="button" value="확인" onclick="fruit()">
+		<input type="button" value="확인" onclick="window.fruit()">
+		<!--
+			오류) 함수 이름을 fruit으로 하면 실행되지 않음
+			이유) 하나의 form 안에 함수와 태그의 이름이 같으면, 자신의 폼을 기본경로로 불러오기 때문에 fruit함수가 아닌 input을 불러오기 때문이다. 
+				 만약 이름을 똑같이 사용하고 싶으면 onclick="window.fruit()" 이렇게 window를 붙여줘야한다 ~!
+		-->
 	</form>
 
 </body>
