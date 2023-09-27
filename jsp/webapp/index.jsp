@@ -26,5 +26,9 @@
 		5. <jsp:forward >, // 페이지 이동
 		6. <jsp:plugin >, // 잘 사용안함
 	--%>
+	
+	<br>
+	application 객체로 공유한 값 (setApplicationAttribute랑 다른 폴더에 있음)<br>
+	<%=application.getAttribute("java") %>
 </body>
 </html>
