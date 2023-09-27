@@ -7,6 +7,7 @@
     if (cookies != null && cookies.length > 0) {
         for (int i = 0 ; i < cookies.length ; i++) {
 
+        	// 쿠키value값을 변경
             if (cookies[i].getName().equals("name")) {
                 Cookie cookie = new Cookie("name", URLEncoder.encode("JSP프로그래밍"));
                 response.addCookie(cookie);
@@ -22,5 +23,6 @@
 	<head><title>값 변경</title></head>
 	<body>
 		name 쿠키의 값을 변경합니다.
+		변경이 되었는지 확인하라면 viewCookies.jsp 파일을 실행해서 확인
 	</body>
 </html>

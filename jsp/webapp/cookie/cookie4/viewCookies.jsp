@@ -9,7 +9,7 @@
 <%
     Cookie[] cookies = request.getCookies();
     if (cookies != null && cookies.length > 0) {
-        for (int i = 0 ; i < cookies.length ; i++) {
+        for (int i = 0 ; i < cookies.length; i++) {
 %>
 
 			<%= cookies[i].getName() %> = 

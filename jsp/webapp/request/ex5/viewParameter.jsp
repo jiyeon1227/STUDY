@@ -28,11 +28,11 @@ address 파라미터 = <%= request.getParameter("address") %>
 <p>
 
 <b>request.getParameterNames() 메소드 사용</b><br>
-<% // getParameterNames는 name값을 구해오난 메서드(많이 사용 안함. 참고로 보기)
+<% // getParameterNames는 name값을 구해오는 메서드(많이 사용 안함. 참고로 보기)
 
 	// 열거형 : name, address, pet
     Enumeration num = request.getParameterNames();
-    while(num.hasMoreElements()) {
+    while(num.hasMoreElements()) {// 값이 있을경우 true리턴
         String name = (String)num.nextElement(); // 다운캐스팅
 %>
         <%= name %>
