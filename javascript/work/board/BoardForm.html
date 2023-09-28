@@ -7,6 +7,7 @@
 
 <!-- 외부 자바스크립트 파일 불러오기-->
 <script src="board.js"></script>
+
 <body>
    
 <form method="post" action="board.jsp" onSubmit="return check()"> <!--onSubmit은 유효성 검사할때 사용된다.-->
@@ -54,8 +55,13 @@
    
    <tr>
       <td colspan="2" align="center">
-         <input type="submit" value="글작성"> <!--전송기능 있는 버튼-->     
-         <input type="reset"  value="취소">   <!-- 초기화 버튼 -->
+        <input type="submit" value="글작성"> <!--전송기능 있는 버튼-->   
+        <input type="button" value="글작성2"><!--전송기능 없는 버튼-->
+			
+		<button>글작성3</button><!--전송기능 있는 버튼-->	
+		<button type="submit">글작성4</button><!--전송기능 있는 버튼-->	
+		<button type="button">글작성5</button><!--전송기능 없는 버튼-->	  
+        <input type="reset"  value="취소"><!-- 초기화 버튼 -->
       </td>
    </tr>
    </table>
