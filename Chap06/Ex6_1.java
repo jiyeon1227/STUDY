@@ -13,7 +13,7 @@ public class Ex6_1 {// main메서드가 있는 class의 이름이 (Ex6_1) 소스
 		t.channel = 7;// 값 변경
 		t.channelDown();// channelDown 호출
 		System.out.println(t.channel + "이 현재 채널입니다.");
-		
+	
 
 	}
 
