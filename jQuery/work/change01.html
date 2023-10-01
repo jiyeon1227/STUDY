@@ -9,10 +9,14 @@
 		$("#email").change(function(){// change 이벤트(이메일 누르는 칸 값이 바꼈을 때)
 			if($("#email").val()==""){// '직접입력' 선택
 				$("#domain").val("").focus();
+//				$("#domain").attr("readonly",false); // 읽기 전용 해제
 				$("#domain").removeAttr("readonly"); // 읽기 전용 해제
 			}else{// '도메인' 선택
 				$("#domain").val($("#email").val()); // val(value) : text 객체에 값을 설정한다.
-				$("#domain").attr("readonly",true); // 읽기전용으로 변경
+			//	document.getElementById("domain").value = $("#email").val();// 이렇게 해도됨
+				
+				$("#domain").attr("readonly","readonly"); // 읽기전용으로 변경
+//				$("#domain").attr("readonly",true); // 읽기전용으로 변경
 			}
 			
 		});

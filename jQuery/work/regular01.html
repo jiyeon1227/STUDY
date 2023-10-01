@@ -5,10 +5,10 @@
 <title>정규 표현식</title>
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 <script>
-	// 정규 표현식은 야잉 많기 때문에 따로 공부를 해야함
+	// 정규 표현식은 양이 많기 때문에 따로 공부를 해야함
 $(document).ready(function(){
 	$('form').submit(function(){
-		// 정규 표현식   //영문소문자,숫자,언드바(_)만 사용가능
+		// 정규 표현식   //영문소문자,숫자,언더바(_)만 사용가능
 		var pattern = /^[a-z]+[a-z0-9_]+$/; 
 		var num = /^[0-9]+$/;              // 숫자만 사용가능    
 		
