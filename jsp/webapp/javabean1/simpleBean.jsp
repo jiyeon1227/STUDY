@@ -13,7 +13,7 @@
 	sb1.setMsg("안녕"); // 이렇게 setter로 전달해야함 
 %>
 
-<!-- 자바빈 객체를 생성하는 역할 -> 객체를 생성하는 거라서 한 번만 해도됨 -->
+<!-- useBean : 자바빈 객체를 생성하는 역할 -> 객체를 생성하는 거라서 한 번만 해도됨 -->
 <jsp:useBean id="sb" class="javaBean.SimpleBean" /> <!-- 자동임포트 -->
 <%-- <jsp:useBean id="sb" class="javaBean.SimpleBean" /> 이 하는 역할을 자바코드로 적으면
 	 SimpleBean sb = new SimpleBean(); 이거임 근데 이렇게 하면 직접 임포트 해야함

@@ -6,13 +6,14 @@
     request.setCharacterEncoding("utf-8");
 %>
 
-<!-- useBean 태그에서만 id를 사용해야함 -->
+<!-- useBean 태그에서만 id를 사용해야함 (만들어진 객체 이름은 memberInfo) -->
 <jsp:useBean id="memberInfo" class="member.MemberInfo" /> <!-- bean 객체생성 (자동임포트됨)-->
 <jsp:setProperty name="memberInfo" property="*" />
+<!-- password, registerDate는 입력하는 값이 아니기 때문에 값을 설정해줌 -->
 <jsp:setProperty name="memberInfo" property="password"
-                 value="<%= memberInfo.getId()%>" /> <!-- id값을 get메서드로 불러와서 password에 저장 -->
+                 value="<%= memberInfo.getId()%>" /> <!-- id값을 get메서드로 불러와서 value값을 password에 저장 -->
 <jsp:setProperty property="registerDate" name="memberInfo"
-				 value="<%=new Timestamp(System.currentTimeMillis())%>"/><!-- Timestamp객체 생성해서 날짜 정보 처리하기 -->				 
+				 value="<%= new Timestamp(System.currentTimeMillis())%>"/><!-- Timestamp객체 생성해서 날짜 정보 처리하기 -->				 
 
 <%
 	SimpleDateFormat sd = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss FFF요일");
