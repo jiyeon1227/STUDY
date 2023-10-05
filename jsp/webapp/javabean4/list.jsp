@@ -27,12 +27,15 @@
 	</tr>
 
 <%
-LogonDBBean manager = LogonDBBean.getInstance();
-List<LogonDataBean> li = manager.selectMember();
+LogonDBBean manager = LogonDBBean.getInstance(); // DAO 클래스에 정적 메서드 호출
+List<LogonDataBean> li = manager.selectMember(); // 제네릭으로 DTO클래스를 작성함으로써 index형 -> object로 반환 -> 다운캐스팅하는데 앞에 자료형을 생략할 수 있음 (여기 다시 정리해서 쓰기)
 
 
 	for(int i = 0; i < li.size(); i++) {
-		LogonDataBean db = (LogonDataBean)li.get(i);
+		// Object get(int index)
+		// 리스트에 어떤 값이 저장되어있냐에 따라서 다운캐스팅의 자료형이 결정됨
+		// 따라서 LogonDataBean데이터형태의 자료형이 들어가 있기 때문에 LogonDataBean로 다운캐스팅한것 !
+		LogonDataBean db = li.get(i);// LogonDataBean db = (LogonDataBean)li.get(i); -> 제네릭으로 받았기 때문에 자료형 생략 가능
 %>
 
 	<tr><td><%=db.getId()%></td>
@@ -42,8 +45,8 @@ List<LogonDataBean> li = manager.selectMember();
 		<td><%=db.getEmail()%></td>
 		<td><%=db.getBlog()%></td>
 		<td><%=db.getReg_date()%></td>
-		<td><a href="updateForm.jsp?id=<%=db.getId()%>">수정</a></td>
-		<td><a href="deleteForm.jsp?id=<%=db.getId()%>">삭제</a></td>
+		<td><a href="updateForm.jsp?id=<%=db.getId()%>">수정</a></td> <!-- id값을 넘겨야 수정할 수 있음 -->
+		<td><a href="deleteForm.jsp?id=<%=db.getId()%>">삭제</a></td> <!-- id값을 넘겨야 삭제할 수 있음 -->
 	</tr>
 <% 
 	}

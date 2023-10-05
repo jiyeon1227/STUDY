@@ -6,8 +6,8 @@
 <%
 	String id = request.getParameter("id");
 
-	LogonDBBean manager = LogonDBBean.getInstance();
-	LogonDataBean db = manager.updateForm(id);
+	LogonDBBean manager = LogonDBBean.getInstance();// 싱글톤으러 만들어진 객체를 정적메서드로 받음
+	LogonDataBean db = manager.updateForm(id);// id값으로 처리
 %>
 
 

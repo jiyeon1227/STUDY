@@ -14,7 +14,7 @@
 <jsp:setProperty name="regBean" property="*" />
 
 <%
-	LogonDBBean manager = LogonDBBean.getInstance();
+	LogonDBBean manager = LogonDBBean.getInstance(); // 정적 메서드 호출
 
 	LogonDataBean old = manager.updateForm(regBean.getId());
 	
