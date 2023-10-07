@@ -15,7 +15,7 @@ public class ArrayListEx {
 		
 		list.add("JAVA");
 		list.add("JDBC");
-		list.add("JSP");// DB가 삽입디면서 인덱스 2번에서 3번으로 이동됨
+		list.add("JSP");// DB가 삽입되면서 인덱스 2번에서 3번으로 이동됨
 		list.add(2,"DB");// 인덱스 2번 위치에 DB추가 -> 2번에 있던게 3번으로 밀리면서 그 뒤로 다 밀림
 		list.add("iBatis");
 		
