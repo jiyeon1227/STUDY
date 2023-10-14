@@ -3,7 +3,6 @@
 <%@ page import="java.util.List"%>
 <%@ page import="upload.BoardDataBean"%>
 <%@ page import="upload.BoardDBBean"%>
-
     
 <%
 	// 1. 한 화면에 출력할 데이터 갯수
