@@ -25,7 +25,7 @@ class JDBC_Delete02 {
 			// ---JDBC_Delete 변경된 내용-------
 			// 테이블에 추가할 내용을 도스 콘솔 창에서 사용자의 입력을 받도록 한다.
 			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-			System.out.println(" customer 테이블에서 레코드 삭제하기 .....");
+			System.out.println(" customer 테이블에서 레코드 삭제하기 ....");
 			System.out.print("삭제할 회원 번호를 입력하세요: ");
 			no = Integer.parseInt(br.readLine()); // 테이블에서 삭제할 name 필드 값을 입력 받음
 
