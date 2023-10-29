@@ -34,9 +34,9 @@ public class DeleteBoard {
 			int result = pstmt.executeUpdate();
 			
 			if(result ==1) {
-				System.out.println("삭제성공힁힁힁 ~~~~~");				
+				System.out.println("삭제성공힁힁힁~~~~~"); 				
 			}else {				
-				System.out.println("삭제실패 ~~~~!!!!!!!");				
+				System.out.println("삭제실패~~~~!!!!!!!");				
 			}
 			
 		}catch(Exception e){
