@@ -13,7 +13,7 @@ class CallableStatementTest02 {
 		String sql;
 		CallableStatement cs = null;
 
-		System.out.print("탈퇴할 회원명을 입력 하세요?");
+		System.out.print("탈퇴할 회원명을 입력 하세요.");
 		Scanner sc = new Scanner(System.in);
 		String name = sc.next();
 
