@@ -16,7 +16,7 @@ public class SelectBoard {
 		PreparedStatement pstmt = null;
 		ResultSet rs01 = null;
 		ResultSet rs02 = null;
-		int count = 0;// 총데이터 갯수
+		int count = 0;// 총 데이터 갯수
 		
 		String driver ="com.mysql.cj.jdbc.Driver";
 		String url = "jdbc:mysql://localhost:3306/jsptest";
